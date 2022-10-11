@@ -1,0 +1,4 @@
+aqilha=read.delim("clipboard")
+View(aqilha)
+
+t.test(aqilha$Volume, conf.level = 0.5)
