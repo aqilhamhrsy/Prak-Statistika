@@ -1,0 +1,7 @@
+aqilha=read.delim("clipboard")
+View(aqilha)
+str(aqilha)
+
+mean(aqilha$Penghasilan)
+
+t.test(aqilha$Penghasilan, mu=14500)
