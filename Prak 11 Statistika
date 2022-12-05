@@ -1,0 +1,19 @@
+#Latihan 1
+df_aqilha = read.delim("clipboard")
+head(df_aqilha)
+
+model <- aov(korosi~metode, data=df_aqilha)
+summary(model)
+
+tukey.test <- TukeyHSD(model)
+tukey.test
+
+#Latihan 2
+df_aqilha=PlantGrowth
+View(df_aqilha)
+
+model <- aov(weight~group, data=df_aqilha)
+summary(model)
+
+tukey.test <- TukeyHSD(model)
+tukey.test
