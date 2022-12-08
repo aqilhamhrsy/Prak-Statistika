@@ -1,0 +1,16 @@
+#Latihan 1
+df_aqilha=read.delim("clipboard")
+head(df_aqilha)
+model_reg=lm(df_aqilha$Y~df_aqilha$X)
+summary(model_reg)
+
+#Latihan 2
+df_aqilha=read.delim("clipboard")
+df_aqilha$Brick_dummy<-ifelse(df_aqilha$Brick=="YES",1,0)
+df_aqilha$N_dummy1<-ifelse(df_aqilha$Neighborhood=="West",1,0)
+df_aqilha$N_dummy2<-ifelse(df_aqilha$Neighborhood=="North",1,0)
+model=lm(df_aqilha$Price~df_aqilha$SqFt+df_aqilha$Bedrooms+df_aqilha$Bathrooms+df_aqilha$Brick_dummy+df_aqilha$N_dummy1+df_aqilha$N_dummy2)
+summary(model)
+
+by(df_aqilha$Price, df_aqilha$Neighborhood, mean)
+by(df_aqilha$Price, df_aqilha$Brick, mean)
