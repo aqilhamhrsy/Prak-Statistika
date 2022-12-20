@@ -1,0 +1,24 @@
+#Latihan 1
+View(dataku_aqilha)
+wilcox.test(dataku_aqilha$Sebelum,dataku_aqilha$Setelah,paired=TRUE)
+
+dataku_aqilha=read.delim("clipboard")
+View(dataku_aqilha)
+wilcox.test(dataku_aqilha$Sebelum,dataku_aqilha$Sesudah,paired=TRUE)
+
+#Latihan 2
+df_aqilha=read.delim("clipboard")
+# independent 2-group Mann-Whitney U Test
+wilcox.test(df_aqilha$obat~df_aqilha$grup)
+#where y is numeric and A is A binary factor
+head(df_aqilha)
+rank(df_aqilha$obat)
+
+#Latihan 3
+dataku_aqilha = read.delim("clipboard")
+View(dataku_aqilha)
+wilcox.test(dataku_aqilha$Ganjil,dataku_aqilha$Genap ,paired=TRUE)
+
+dataku_aqilha = read.delim("clipboard")
+View(dataku_aqilha)
+wilcox.test(dataku_aqilha$caffeine,dataku_aqilha$placebo ,paired=TRUE)
